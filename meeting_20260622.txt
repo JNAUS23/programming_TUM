@@ -1,13 +1,18 @@
--clarify variables: hospital type code, ... -> what does it mean? give context!
--which columns to leave out/keep?
--ward type: 6 types; count(rows): two or three of them are almost empty.
--next step: visualisation: mean of length of stay for the other columns to see coreleation!
--city codes: how to group/visualise?
--how to order the axis in plot, s.t. the age groups, bed groups etc. are in order?
--corelation between the different factors and length of stay
--remove the rows w/o length of stay (last third roughly)! dont remove the other rows.
+
+
 
 
 !!!
 -for every visualisation: remove only the rows that do not contain the variable we analyze
+-do not use any other data set than the one in Github, as we remove the rows missing "length of stay" here!
 !!!
+
+------------
+
+TODO:
+-delete rows from data set that miss length of stay! -> delete entirely from the data set in github that we work with.
+-create function that filters out empty rows for search variables
+-create visualisations for correlations: aggregate mean(length of stay) and every other variable
+-find out what the data means (hospital type, ward type, ...) -> give context!
+-find way to group the city codes. Are these real regions (e.g. in the US) we can group/work with, or random?
+-find out how to order the axis in plot, s.t. the age groups, bed groups etc. are in order; create function if possible.
