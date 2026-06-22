@@ -27,6 +27,7 @@ Seva: -remove data rows that miss at least one variable
 Jannis: -keep track of all different inputs from other team members and merge files/functions.
         -Create one file with all necessary installs/imports.
         -create UML/process diagram of all steps we did.
+        (-delegate follow-up tasks if necessary)
 Consti: -
 Sherry: -
 Stan:
