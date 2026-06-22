@@ -6,3 +6,8 @@
 -how to order the axis in plot, s.t. the age groups, bed groups etc. are in order?
 -corelation between the different factors and length of stay
 -remove the rows w/o length of stay (last third roughly)! dont remove the other rows.
+
+
+!!!
+-for every visualisation: remove only the rows that do not contain the variable we analyze
+!!!
