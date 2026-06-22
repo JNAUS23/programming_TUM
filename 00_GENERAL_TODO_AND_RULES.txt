@@ -28,6 +28,7 @@ TODO:
 -find out how to order the axis in plot, s.t. the age groups, bed groups etc. are in order; create function if possible.
 
 
+
 ---------
 
 Seva: -remove data rows that miss at least one variable
