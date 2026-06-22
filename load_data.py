@@ -1,7 +1,50 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 data = pd.read_csv('Topic3_healthcare_analytics_dataset.csv')
 
-print(data["Age"][1])
+'''
+#print dtype for each column
+for column in data.columns:
+    print(f"{column}: {type(data[column][1])}")
+'''
+def visualize_data(data):
+    def plot_distribution(distribution, title):
+        y = [element for element in distribution.values()]
+        #x = [i for i in range(len(y))]
+        x = [element for element in distribution.keys()]
+        plt.figure(figsize=(8, 8))
+        plt.title(title)
+        plt.stem(x, y)
+        plt.show()
+
+    ignore_col = ["case_id", "patientid", "Admission_Deposit"]
+    for column in data.columns:
+        if column in ignore_col:
+            continue
+        ranges = data[column].value_counts()  # returns a pandas series
+        counts_dict = {str(k): v for k, v in ranges.to_dict().items()}
+        counts_dict = dict(sorted(counts_dict.items()))
+        plot_distribution(counts_dict, column)
+
+visualize_data(data)
+
+for column in data.columns:
+    if isinstance(data[column][1], float) or isinstance(data[column][1], int):
+        # get min, max, avg, median
+        max = data[column].max()
+        min = data[column].min()
+        mean = data[column].mean()
+        std = data[column].std()
+        print(f"{column} | min:{min} , max:{max} , mean:{mean:.2f} , std:{std:.2f}")
+
+'''
+To Do:
+- for stay & Age map group to number such that it can be used instead of a string
+- map the graphs to each other: does available bed influence the stay etc
+- what is a hospital type code for example
+'''
+
+
 
 # Prints rows, columns, column types, missinh values.
 # Basic stats ( print_data_quality function): Rows with at least one missing value, missing values by column
