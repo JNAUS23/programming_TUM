@@ -9,7 +9,8 @@ Argument: if one variable is missing, data set is probably faulty; many might be
 -always comment your code! comment too much rather than too little,
     also keep in mind that for the final presentation everyone needs to know every piece of code.
 -When you commit to github: always fill in a suitable description in commit message!
--
+-communicate delays or estimated time of todos where intersections of us exist!
+    I.e. if other group members depend on it.
 
 ------------
 
