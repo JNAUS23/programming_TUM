@@ -10,8 +10,7 @@
 ------------
 
 TODO:
--delete rows from data set that miss length of stay! -> delete entirely from the data set in github that we work with.
--create function that filters out empty rows for search variables
+-delete rows from data set that miss at least one variable! Argument: if one variable is missing, data set is probably faulty; many might be entered by hand (see context: hospital staff probably transmits data.)
 -create visualisations for correlations: aggregate mean(length of stay) and every other variable
 -find out what the data means (hospital type, ward type, ...) -> give context!
 -find way to group the city codes. Are these real regions (e.g. in the US) we can group/work with, or random?
