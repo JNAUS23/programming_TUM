@@ -31,6 +31,6 @@ Jannis: -keep track of all different inputs from other team members and merge fi
         (-delegate follow-up tasks if necessary)
 Consti: -
 Sherry: -
-Stan:
+Stan: -
 
 
