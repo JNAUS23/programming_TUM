@@ -9,7 +9,7 @@ Argument: if one variable is missing, data set is probably faulty; many might be
 
 
 !!! RULESET FOR WORKING !!!
--do not use any other data set than the one in Github, as we remove the rows missing "length of stay" here!
+-do not use any other data set than the one in Github, as we remove the rows missing >= one variable here!
 -work in individual files. Upload to github with name, date, and tell Jannis/group when to merge them via whatsapp.
     Jannis then deletes the preliminary files after merging.
 -always comment your code! comment too much rather than too little,
