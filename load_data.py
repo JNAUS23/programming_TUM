@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('TkAgg')  # usually the default
 data = pd.read_csv('Topic3_healthcare_analytics_dataset.csv')
 
 '''
