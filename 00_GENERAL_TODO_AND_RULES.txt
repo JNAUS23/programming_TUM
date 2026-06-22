@@ -10,8 +10,8 @@ Argument: if one variable is missing, data set is probably faulty; many might be
 
 !!! RULESET FOR WORKING !!!
 -do not use any other data set than the one in Github, as we remove the rows missing "length of stay" here!
--work in individual files. Upload to github with name, date, and tell me when to merge them via whatsapp.
-    I then delete the preliminary files after merging.
+-work in individual files. Upload to github with name, date, and tell Jannis/group when to merge them via whatsapp.
+    Jannis then deletes the preliminary files after merging.
 -always comment your code! comment too much rather than too little,
     also keep in mind that for the final presentation everyone needs to know every piece of code.
 -When you commit to github: always fill in a suitable description in commit message!
@@ -20,24 +20,24 @@ Argument: if one variable is missing, data set is probably faulty; many might be
 
 ------------
 
-TODO:
-
--create visualisations for correlations: aggregate mean(length of stay) and every other variable
--find out what the data means (hospital type, ward type, ...) -> give context!
--find way to group the city codes. Are these real regions (e.g. in the US) we can group/work with, or random?
--find out how to order the axis in plot, s.t. the age groups, bed groups etc. are in order; create function if possible.
-
 
 
 ---------
 
 Seva: -remove data rows that miss at least one variable
+
 Jannis: -keep track of all different inputs from other team members and merge files/functions.
         -Create one file with all necessary installs/imports.
         -create UML/process diagram of all steps we did.
         (-delegate follow-up tasks if necessary)
-Consti: -
-Sherry: -
-Stan: -
+Consti: -research, how statistics work in second-order corelation; research basic statistical methods.
+
+Sherry: -create visualisations for correlations: aggregate mean(length of stay) and every other variable
+/ find correlations or also negative or non-correlating factors relating to length of stay.
+-find out how to order the axis in plot, s.t. the age groups, bed groups etc. are in order; create function if possible.
+
+
+Stan: -find out what the data means (hospital type, ward type, ...) -> give context!
+-find way to group the city codes. Are these real regions (e.g. in the US) we can group/work with, or random?
 
 
