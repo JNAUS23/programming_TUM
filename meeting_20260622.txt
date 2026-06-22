@@ -1,0 +1,7 @@
+-clarify variables: hospital type code, ... -> what does it mean? give context!
+-which columns to leave out/keep?
+-ward type: 6 types; count(rows): two or three of them are almost empty.
+-next step: visualisation: mean of length of stay for the other columns to see coreleation!
+-city codes: how to group/visualise?
+-how to order the axis in plot, s.t. the age groups, bed groups etc. are in order?
+-corelation between the different factors and length of stay
