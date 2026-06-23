@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
+import numpy as np
 matplotlib.use('TkAgg')  # usually the default
 data = pd.read_csv('Topic3_healthcare_analytics_dataset.csv')
 
@@ -31,7 +32,7 @@ def visualize_data(data):
 visualize_data(data)
 
 for column in data.columns:
-    if isinstance(data[column][1], float) or isinstance(data[column][1], int):
+    if isinstance(data[column][1], np.float64) or isinstance(data[column][1], np.int64):
         # get min, max, avg, median
         max = data[column].max()
         min = data[column].min()
