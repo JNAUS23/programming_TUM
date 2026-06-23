@@ -28,7 +28,7 @@ Seva: -remove data rows that miss at least one variable : DONE
       -research, how statistics work in second-order corelation; research basic statistical methods and data science basics
 
 Jannis: -keep track of all different inputs from other team members and merge files/functions.
-        -Create one file with all necessary installs/imports.
+        -Create one file with all necessary installs/imports. DONE
         -create UML/process diagram of all steps we did.
         (-delegate follow-up tasks if necessary)
 
