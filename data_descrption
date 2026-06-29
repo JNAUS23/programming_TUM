@@ -1,0 +1,79 @@
+Column,Description
+
+HOSPITAL DATA
+
+Hospital_code,Unique code for the Hospital 32 total hospitals 
+[ 8  2 10 26 23 32  1 22 16  9  6 29 12  3 21 28 27 19  5 14 13 31 24 17
+ 25 15 11 30 18  4  7 20] 
+
+City_Code_Hospital,City Code of the Hospital 
+[ 3  5  1  2  6  9 10  4 11  7 13]
+
+Hospital_region_code,Region Code of the Hospital
+['Z', 'X', 'Y'}
+Available Extra Rooms in Hospital,Number of Extra rooms available in the Hospital maybe a correlation beetween the hospitals occupancy rate and LOS 
+ {3  2  1  4  6  5  7  8  9 10 12  0 11 20 14 21 13 24]
+
+Department,Department overlooking the case
+With predcited lenght of stay in the simmialr field 
+'radiotherapy', LOW with HIGH outliers
+'anesthesia',  LOW
+'gynecology',  LOS low 
+'TB & Chest disease', LOS high
+ 'surgery' MID to to high 
+
+Ward_Type,Code for the Ward type  # no distinction between them but can do correlation 
+'R', 'S', 'Q', 'P', 'T', 'U']
+Length: 6
+
+Ward_Facility_Code,Code for the Ward Facility - How good some word facilities perform ( tricky tho cuz might vary between departments)
+'F', 'E', 'D', 'B', 'A', 'C']
+
+Bed Grade,Condition of Bed in the Ward
+[2. 3. 4. 1.] 
+
+patientid,Unique Patient Id 
+# look how is structred maybe data in it 
+
+City_Code_Patient,City Code for the patient
+7.  8.  2.  5.  6.  3.  4.  1.  9. 14. 25. 15. 12. 10. 28. 24. 23. 20.
+ 11. 13. 21. 18. 16. 26. 27. 22. 19. 31. 34. 32. 30. 29. 37. 33. 35. 36.
+ 38.]
+--- Unique values in 'City_Code_Hospital' (11 total) ---
+[ 3  5  1  2  6  9 10  4 11  7 13]
+
+
+Type of Admission,Admission Type registered by the Hospital
+Emergency', 'Trauma', 'Urgent'] 
+
+Severity of Illness,Severity of the illness recorded at the time of admission
+Extreme', 'Moderate', 'Minor'] 
+
+Visitors with Patient,Number of Visitors with the patient
+2  4  3  8  6  7 13  5  1 10 15 11 12  9 24 16 14 20  0 19 18 17 23 21
+ 32 30 22 25] 
+
+Age,Age of the patient - int  ten invervals
+'51-60',  '71-80',  '31-40',  '41-50',  '81-90',  '61-70',  '21-30',
+  '11-20',   '0-10', '91-100']
+Length: 10, dtype: str 
+
+Admission_Deposit,Deposit at the Admission Time - how much did the guys pay
+
+
+Stay,Stay Days by the patient 
+0-10',              '41-50',              '31-40',
+              '11-20',              '51-60',              '21-30',
+              '71-80', 'More than 100 Days',              '81-90',
+              '61-70',             '91-100'] 
+
+
+
+
+
+
+
+
+
+
+
