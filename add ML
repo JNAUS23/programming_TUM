@@ -1,0 +1,41 @@
+import numpy as np
+from sklearn.metrics import confusion_matrix
+
+_, X_test, _, y_test = pre.get_test_train_split(data)
+
+with torch.inference_mode():
+    logits = model(X_test)
+    preds = logits.argmax(dim=1)
+
+inverse = {code: value for value, code in pre.label_mapping.items()}  # code -> Stay label
+labels_sorted = sorted(inverse.keys())
+label_names = [inverse[c] for c in labels_sorted]
+
+y_true = y_test.cpu().numpy()
+y_pred = preds.cpu().numpy()
+
+total_acc = accuracy_fn(preds, y_test)
+majority = torch.mode(y_test).values
+baseline_acc = (y_test == majority).float().mean().item() * 100
+
+
+print(f"\n{'Stay class':<20}{'actual':>8}{'predicted':>11}{'accuracy':>11}")
+
+for code in labels_sorted:
+    true_mask = (y_test == code)
+    n_actual = true_mask.sum().item()               # times this class truly occurs
+    n_predicted = (preds == code).sum().item()      # times the model predicted this class
+    acc = accuracy_fn(preds[true_mask], y_test[true_mask]) if n_actual > 0 else float("nan")
+    print(f"{inverse[code]:<20}{n_actual:>8}{n_predicted:>11}{acc:>9.2f}%")
+
+
+cm = confusion_matrix(y_true, y_pred, labels=labels_sorted)
+row_sums = cm.sum(axis=1, keepdims=True)
+cm_pct = np.divide(cm, row_sums, where=row_sums != 0) * 100
+
+cm_df = pd.DataFrame(cm_pct, index=label_names, columns=label_names).round(1)
+
+pd.set_option("display.width", 200)
+pd.set_option("display.max_columns", None)
+
+print(cm_df)
